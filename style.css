@@ -131,13 +131,15 @@ footer {
   }
 }
 .project-image {
-  max-width: 90%;
+  width: 100%;
+  max-width: 500px;
   height: auto;
-  margin: 10px auto;
-  border: 2px solid #66fcf1;
-  border-radius: 10px;
   display: block;
-}
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid #66fcf1;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
+    }
 
 .marquee {
   width: 100%;
@@ -155,7 +157,12 @@ footer {
   padding-left: 100%;
   animation: scroll-left 12s linear infinite;
 }
-
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
