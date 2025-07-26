@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #66fcf1;
+}
+
+header {
+  background: #1f1f1f;
+  padding: 20px;
+  position: relative;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00f7ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a:hover {
+  color: #ffffff;
+  border-bottom: 2px solid #66fcf1;
+}
+
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.home {
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .content {
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: #66fcf1;
+}
+
+.about,
+.portfolio,
+.contact {
+  background-color: #1e1e1e;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #66fcf1;
+}
+
+footer {
+  background: #1f1f1f;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home h1 {
+    font-size: 2.2rem;
+  }
+
+  .home p {
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
