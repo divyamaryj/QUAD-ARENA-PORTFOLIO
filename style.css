@@ -140,23 +140,26 @@ footer {
   border: 2px solid #66fcf1;
   box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
     }
-
-.marquee {
-  width: 100%;
-  background: #1f1f1f;
-  color: #66fcf1;
+.marquee-container {
+  background-color: #00f7ff;
   overflow: hidden;
   white-space: nowrap;
-  box-sizing: border-box;
-  padding: 10px 0;
-  font-weight: bold;
+  width: 100%;
 }
 
-.marquee p {
+.marquee-text {
   display: inline-block;
-  padding-left: 100%;
-  animation: scroll-left 12s linear infinite;
+  padding: 10px;
+  font-weight: bold;
+  color: #000;
+  animation: marquee 12s linear infinite;
 }
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
 .image-gallery {
   display: flex;
   flex-direction: column;
